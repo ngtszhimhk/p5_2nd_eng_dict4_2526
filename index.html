@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth Dictation 第四次英默</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        
+        /* 點擊發音的英文單字樣式 */
+        .clickable { color: #2980b9; cursor: pointer; font-weight: bold; padding: 2px 5px; border-radius: 4px; transition: background 0.2s; }
+        .clickable:hover { background-color: #e8f4f8; text-decoration: underline; }
+        
+        /* C部分句子的樣式 */
+        .sentence-row { display: flex; align-items: center; margin-bottom: 10px; padding: 10px; background: #f8f9fa; border-left: 4px solid #2ecc71; border-radius: 4px; }
+        .play-btn { background-color: #2ecc71; color: white; border: none; padding: 8px 12px; border-radius: 50%; cursor: pointer; margin-right: 15px; font-size: 16px; transition: 0.3s; }
+        .play-btn:hover { background-color: #27ae60; transform: scale(1.1); }
+        
+        .c-text-container { font-size: 18px; line-height: 2; padding: 15px; border: 1px dashed #bdc3c7; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Fourth Dictation 第四次英默</h1>
+
+    <div class="section">
+        <h2>A部分：不規則動詞表 (滿分10分，每個分詞得1分)</h2>
+        <p>💡 點擊下方表格中的英文單字即可聆聽發音</p>
+        <table>
+            <tr><th>編號</th><th>動詞(無時態)</th><th>分詞(完成式)</th><th>詞義</th><th>編號</th><th>動詞(無時態)</th><th>分詞(完成式)</th><th>詞義</th></tr>
+            <tr>
+                <td>1</td><td><span class="clickable" onclick="playWord('forget')">forget</span></td><td><span class="clickable" onclick="playWord('forgotten')">forgotten</span></td><td>忘記</td>
+                <td>6</td><td><span class="clickable" onclick="playWord('become')">become</span></td><td><span class="clickable" onclick="playWord('become')">become</span></td><td>成為</td>
+            </tr>
+            <tr>
+                <td>2</td><td><span class="clickable" onclick="playWord('hold')">hold</span></td><td><span class="clickable" onclick="playWord('held')">held</span></td><td>拿着</td>
+                <td>7</td><td><span class="clickable" onclick="playWord('hear')">hear</span></td><td><span class="clickable" onclick="playWord('heard')">heard</span></td><td>聽到</td>
+            </tr>
+            <tr>
+                <td>3</td><td><span class="clickable" onclick="playWord('ride')">ride</span></td><td><span class="clickable" onclick="playWord('ridden')">ridden</span></td><td>騎</td>
+                <td>8</td><td><span class="clickable" onclick="playWord('make')">make</span></td><td><span class="clickable" onclick="playWord('made')">made</span></td><td>製作</td>
+            </tr>
+            <tr>
+                <td>4</td><td><span class="clickable" onclick="playWord('steal')">steal</span></td><td><span class="clickable" onclick="playWord('stolen')">stolen</span></td><td>偷</td>
+                <td>9</td><td><span class="clickable" onclick="playWord('find')">find</span></td><td><span class="clickable" onclick="playWord('found')">found</span></td><td>找出</td>
+            </tr>
+            <tr>
+                <td>5</td><td><span class="clickable" onclick="playWord('feel')">feel</span></td><td><span class="clickable" onclick="playWord('felt')">felt</span></td><td>感覺</td>
+                <td>10</td><td><span class="clickable" onclick="playWord('meet')">meet</span></td><td><span class="clickable" onclick="playWord('met')">met</span></td><td>遇見</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>B部分：詞語 (滿分30分，每個詞語得3分)</h2>
+        <table>
+            <tr>
+                <td>1. <span class="clickable" onclick="playWord('caring')">caring</span><br>有愛心的</td>
+                <td>2. <span class="clickable" onclick="playWord('cheerful')">cheerful</span><br>高興的</td>
+                <td>3. <span class="clickable" onclick="playWord('creative')">creative</span><br>有創意的</td>
+                <td>4. <span class="clickable" onclick="playWord('generous')">generous</span><br>大方的</td>
+            </tr>
+            <tr>
+                <td>5. <span class="clickable" onclick="playWord('gentle')">gentle</span><br>温和的</td>
+                <td>6. <span class="clickable" onclick="playWord('helpful')">helpful</span><br>願意幫忙的</td>
+                <td>7. <span class="clickable" onclick="playWord('humble')">humble</span><br>謙虛的</td>
+                <td>8. <span class="clickable" onclick="playWord('humorous')">humorous</span><br>幽默的</td>
+            </tr>
+            <tr>
+                <td>9. <span class="clickable" onclick="playWord('athlete')">athlete</span><br>運動員</td>
+                <td>10. <span class="clickable" onclick="playWord('responsible')">responsible</span><br>負責</td>
+                <td>11. <span class="clickable" onclick="playWord('photographer')">photographer</span><br>攝影師</td>
+                <td>12. <span class="clickable" onclick="playWord('brave')">brave</span><br>勇敢的</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>C部分：課文 (滿分60分) - 單字點讀區</h2>
+        <p>💡 點擊文章中的任何一個單字，即可聆聽單獨發音</p>
+        <div id="dynamic-c-text" class="c-text-container">
+            Fung Kam-hung is an amazing person. He lost his left leg in a traffic accident in 1979, but he never gave up. He has been a runner since 2007. He finished his first 10-kilometre running race that year. Fung and his caring wife have been married for 30 years. He met her after the accident. She is a nurse. She took care of him in the hospital since then. Dream City is an indoor theme park for kids. You can role-play different jobs and learn useful skills here. You can also earn DC money and spend it in our gift shop.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>C部分：課文 - 整句朗讀區</h2>
+        <p>💡 點擊播放按鈕，聆聽整句發音</p>
+        <div id="sentence-container">
+            </div>
+    </div>
+
+    <script>
+        // 播放單字的函數
+        function playWord(word) {
+            // 清理標點符號並轉小寫，確保檔名符合 (保留連字號和數字)
+            let cleanWord = word.replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase();
+            if(!cleanWord) return;
+            let audio = new Audio(`audio/word_${cleanWord}.mp3`);
+            audio.play().catch(e => alert('找不到音檔: ' + cleanWord + '.mp3'));
+        }
+
+        // 播放整句的函數
+        function playSentence(num) {
+            let numStr = num < 10 ? '0' + num : num;
+            let audio = new Audio(`audio/Sentence_${numStr}.mp3`);
+            audio.play().catch(e => alert('找不到音檔: Sentence_' + numStr + '.mp3'));
+        }
+
+        // --- 動態處理 C 部分單字點讀 ---
+        window.onload = function() {
+            const textContainer = document.getElementById('dynamic-c-text');
+            const rawText = textContainer.innerText;
+            // 根據空白或標點拆分，但保留標點
+            const wordsAndPunctuation = rawText.split(/(\s+|(?=[.,])|(?<=[.,]))/);
+            
+            textContainer.innerHTML = '';
+            
+            wordsAndPunctuation.forEach(chunk => {
+                // 如果包含英文字母或數字 (例如 1979)
+                if (/[a-zA-Z0-9]/.test(chunk)) {
+                    let span = document.createElement('span');
+                    span.className = 'clickable';
+                    span.innerText = chunk;
+                    let cleanWordForClick = chunk.replace(/[^a-zA-Z0-9\-]/g, '');
+                    span.onclick = () => playWord(cleanWordForClick);
+                    textContainer.appendChild(span);
+                } else {
+                    // 空白或純標點直接加入
+                    textContainer.appendChild(document.createTextNode(chunk));
+                }
+            });
+
+            // --- 動態生成 C 部分整句朗讀列表 ---
+            const sentences = [
+                "Fung Kam-hung is an amazing person.",
+                "He lost his left leg in a traffic accident in 1979, but he never gave up.",
+                "He has been a runner since 2007.",
+                "He finished his first 10-kilometre running race that year.",
+                "Fung and his caring wife have been married for 30 years.",
+                "He met her after the accident.",
+                "She is a nurse.",
+                "She took care of him in the hospital since then.",
+                "Dream City is an indoor theme park for kids.",
+                "You can role-play different jobs and learn useful skills here.",
+                "You can also earn DC money and spend it in our gift shop."
+            ];
+
+            const sentenceContainer = document.getElementById('sentence-container');
+            sentences.forEach((sentence, index) => {
+                const sentenceNum = index + 1;
+                const row = document.createElement('div');
+                row.className = 'sentence-row';
+                row.innerHTML = `
+                    <button class="play-btn" onclick="playSentence(${sentenceNum})">▶</button>
+                    <span>${sentence}</span>
+                `;
+                sentenceContainer.appendChild(row);
+            });
+        };
+    </script>
+</body>
+</html>
